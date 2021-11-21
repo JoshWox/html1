@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    
+    <!-- Joshua Woxland-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Lab4">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Joshua Woxland">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+    
+<style>
+    
+    /* Comment */
+    .item1 { grid-area: header; }
+    .item2 { grid-area: menu; }
+    .item3 { grid-area: main; }
+    .item4 { grid-area: footer; }
+
+    .grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'main main main main main menu'
+        'footer footer footer footer footer footer';
+    grid-gap: 10px;
+    background-color: green;
+    padding: 10px;
+    border-style: solid;
+    }
+
+    .grid-container > div {
+     background-color: lightgrey;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    }
+    
+    body {
+        background-color: green;
+    }
+    
+    @media screen and (max-width: 768px) {
+	body {
+		background-color: blue;
+	}
+    }
+    @media screen and (max-width: 480px) {
+        body {
+            background-color: red;
+        }
+</style>
+    
+<script>
+    
+    // Comment
+    
+
+</script>
+
+<body>
+    
+    <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>  
+        <div class="item4">Footer</div>
+    </div>
+    
+    <div onclick="document.body.style.backgroundColor = '#cdFFFFFF';"> Click Me </div>
+    
+</body>
+
+</html>
